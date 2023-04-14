@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "commonjs": true,
-        "es2021": true
+        "es2021": true,
+        "node": true
     },
     "extends": ["eslint:recommended", "plugin:prettier/recommended"],
     "plugins": ["prettier"],
@@ -13,7 +14,9 @@
     },
     "rules": {
         "prettier/prettier": "warn",
-        "eqeqeq": "warn",
-        "no-async-promise-executor": "off"
+        // "eqeqeq": "warn",
+        "no-async-promise-executor": "off",
+        // "no-unused-vars": "off"
+        "no-unused-vars": ["error", { "argsIgnorePattern": "next" }]
     }
-}
+  }
