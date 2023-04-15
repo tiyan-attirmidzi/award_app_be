@@ -1,8 +1,8 @@
 const jwt = require("jsonwebtoken");
 const { raw } = require("objection");
-const UserModel = require("../../models/user.model");
-const { responseJsonCustom } = require("../../utils/response");
-const { appJwtKey, appJwtExp } = require("../../configs/app");
+const UserModel = require("../../../models/user.model");
+const { responseJsonCustom } = require("../../../utils/response");
+const { appJwtKey, appJwtExp } = require("../../../configs/app");
 
 const authSignIn = async (req, res, next) => {
   try {
@@ -27,7 +27,7 @@ const authSignIn = async (req, res, next) => {
     return responseJsonCustom(
       res,
       true,
-      "Signed In Successfully!",
+      "User Signed In Successfully.",
       { user, token },
       200
     );
