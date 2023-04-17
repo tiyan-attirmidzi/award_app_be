@@ -14,7 +14,7 @@ const { appPort } = require("../configs/app");
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(appPort || "3000");
+var port = normalizePort(appPort || "4000");
 app.set("port", port);
 
 /**

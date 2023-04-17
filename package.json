@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./src/bin/www",
-    "dev": "DEBUG=backend:* nodemon ./src/bin/www"
+    "dev": "DEBUG=backend:* nodemon ./src/bin/www",
+    "migration": "knex migrate:latest",
+    "seeder": "knex seed:run"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
